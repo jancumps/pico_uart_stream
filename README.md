@@ -2,7 +2,7 @@
 Raspberry Pico library that lets you stream text from and to UART.  
 Goal: have C++ style streaming, at no runtime overhead. This is embedded friendly code.
 ```cpp
-u << "hello element14!\n" ;  
+u << "hello world!\n" ;  
 ```
 It's intended for object oriented designs, where streaming is a common practice.
 
@@ -31,7 +31,7 @@ uart_inst_t * pico_init_uart() {
 
 int main() {
     pico_uart_stream::uartiostream u(pico_init_uart());
-    u << "hello element14!\n" ;  
+    u << "hello world!\n" ;  
 
     while (true) {
         std::string s;
