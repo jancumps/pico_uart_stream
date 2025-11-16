@@ -20,7 +20,6 @@ target_sources(pico_uart_stream
 )
 
 target_link_libraries( pico_uart_stream
-        $<COMPILE_ONLY:pico_stdlib>
         $<COMPILE_ONLY:hardware_uart>
 )
 
