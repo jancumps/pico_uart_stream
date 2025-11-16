@@ -1,5 +1,5 @@
 # pico_uart_stream library
-Raspberry Pico library that lets you stream text from and to UART.
+Raspberry Pico library that lets you stream text from and to UART.  
 Goal: have C++ style streaming, at no runtime overhead. This is embedded friendly code.
 ```cpp
 u << "hello element14!\n" ;  
