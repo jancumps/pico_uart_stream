@@ -8,7 +8,7 @@ It's intended for object oriented designs, where streaming is a common practice.
 
 ## documentation:
 [1: usage and example](https://community.element14.com/products/raspberry-pi/b/blog/posts/c-write-your-own-stream-class---part-2-pico-uart-io-stream-embedded-friendly-c)  
-[2: verify that this does not cause cruntime overhead](https://community.element14.com/technologies/code_exchange/b/blog/posts/c-write-your-own-stream-class---part-1a-the-cost-of-objects-can-be-zero-embedded-friendly-c)  
+[2: verify that this does not cause runtime overhead](https://community.element14.com/technologies/code_exchange/b/blog/posts/c-write-your-own-stream-class---part-1a-the-cost-of-objects-can-be-zero-embedded-friendly-c)  
 
 
 ## Example: all available PIO state machines generate an interrupt:  
