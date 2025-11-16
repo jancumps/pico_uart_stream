@@ -11,7 +11,7 @@ It's intended for object oriented designs, where streaming is a common practice.
 [2: verify that this does not cause runtime overhead](https://community.element14.com/technologies/code_exchange/b/blog/posts/c-write-your-own-stream-class---part-1a-the-cost-of-objects-can-be-zero-embedded-friendly-c)  
 
 
-## Example: write a text, then echo any received data:  
+## Example: stream a text to UART, then echo any received data via in and out stream:  
 Check [usage and example](https://community.element14.com/products/raspberry-pi/b/blog/posts/c-write-your-own-stream-class---part-2-pico-uart-io-stream-embedded-friendly-c) for the complete example code.   
 ```cpp
 import pico_uart_stream;
