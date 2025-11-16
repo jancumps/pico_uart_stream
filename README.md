@@ -22,15 +22,16 @@ import pico_uart_stream;
 #define UART_TX_PIN 0
 #define UART_RX_PIN 1
 
-uart_inst_t * pico_init_uart() {
+void pico_init_uart() {
     uart_init(UART_ID, BAUD_RATE);
     gpio_set_function(UART_TX_PIN, UART_FUNCSEL_NUM(UART_ID, UART_TX_PIN));
     gpio_set_function(UART_RX_PIN, UART_FUNCSEL_NUM(UART_ID, UART_RX_PIN));
-    return UART_ID;
+    return;
 }
 
 int main() {
-    pico_uart_stream::uartiostream u(pico_init_uart());
+    pico_init_uart();
+    pico_uart_stream::uartiostream u(UART_ID);
     u << "hello world!\n" ;  
 
     while (true) {
