@@ -4,7 +4,7 @@ Goal: have C++ style streaming, at no runtime overhead. This is embedded friendl
 ```cpp
 u << "hello element14!\n" ;  
 ```
-It's most useful in object oriented designs, where streaming ais a commond practice.
+It's intended for object oriented designs, where streaming is a common practice.
 
 ## documentation:
 [1: usage and example](https://community.element14.com/products/raspberry-pi/b/blog/posts/c-write-your-own-stream-class---part-2-pico-uart-io-stream-embedded-friendly-c)  
