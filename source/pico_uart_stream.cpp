@@ -12,32 +12,32 @@ export namespace pico_uart_stream {
 
 class uartostream {
 public:
-    uartostream(uart_inst_t *uart) : uart(uart) {}
+    uartostream(uart_inst_t *uart) : uart_(uart) {}
 
     uartostream& operator << (const char* msg) {
         // write to UART
-        uart_puts(uart, msg);
+        uart_puts(uart_, msg);
         return *this;
     }
 
     uartostream& operator << (const std::string& msg) {
-        uart_puts(uart, msg.c_str());
+        uart_puts(uart_, msg.c_str());
         return *this;
     }
 
 private:
-    uart_inst_t * uart;
+    uart_inst_t * uart_;
 };
 
 class uartistream {
 public:
-    uartistream(uart_inst_t *uart) : uart(uart) {}
+    uartistream(uart_inst_t *uart) : uart_(uart) {}
   
     uartistream& operator >> (std::string& msg) { // blocking
         char c  = 0;
         // msg.clear(); no. If the string has info, add to it.
         do { 
-            c = uart_getc(uart);
+            c = uart_getc(uart_);
             if (c != 255) {
                 msg += c;
             }
