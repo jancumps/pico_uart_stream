@@ -46,7 +46,7 @@ public:
     }
 
 private:
-    uart_inst_t * uart;
+    uart_inst_t * uart_;
 };
 
 class uartiostream: public uartistream, public uartostream {
