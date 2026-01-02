@@ -13,16 +13,16 @@ project(pico_uart_stream C CXX ASM)
 
 pico_sdk_init()
 
-add_library(${CMAKE_PROJECT_NAME})
+add_library(pico_uart_stream)
 target_sources(pico_uart_stream
         PUBLIC
 )
-target_sources(${CMAKE_PROJECT_NAME}
+target_sources(pico_uart_stream
         PUBLIC
         FILE_SET cxx_modules TYPE CXX_MODULES FILES
         ${CMAKE_CURRENT_SOURCE_DIR}/source/pico_uart_stream.cpp
 )
 
-target_link_libraries( ${CMAKE_PROJECT_NAME}
+target_link_libraries(pico_uart_stream
         $<COMPILE_ONLY:hardware_uart>
 )
