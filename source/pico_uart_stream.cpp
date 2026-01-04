@@ -38,7 +38,7 @@ public:
         // msg.clear(); no. If the string has info, add to it.
         do { 
             c = uart_getc(uart_);
-            if (c != 255) {
+            if (c < 254) { // discard occurances of 254 and 255 that are sometimes in the input buffer before starting
                 msg += c;
             }
         } while (c != '\n');
